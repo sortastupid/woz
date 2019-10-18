@@ -313,6 +313,8 @@ a {
     width: 25px;
     height: 25px;
     background: white;
+    -webkit-box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 1);
+            box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 1);
 }
 
 .posts-wrapper::-webkit-scrollbar-button:single-button {
@@ -346,7 +348,10 @@ a {
 }
 
 .posts-wrapper::-webkit-scrollbar-corner {
-    background: white url('https://static.tumblr.com/kifah6n/0Yrpzdy7m/resize-icon.svg') no-repeat center;
+    -webkit-box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 1), inset -1px -1px 0px 1px rgba(0, 0, 0, 1);
+            box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 1), inset -1px -1px 0px 1px rgba(0, 0, 0, 1);
+    background: white url('https://static.tumblr.com/kifah6n/0Yrpzdy7m/resize-icon.svg') no-repeat;
+    background-position: 3px 3px;
     background-size: 18px;
 }
 
@@ -356,10 +361,12 @@ a {
 
 .posts-wrapper::-webkit-scrollbar-track-piece:horizontal {
     border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .posts-wrapper::-webkit-scrollbar-track-piece:vertical {
     border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
 
@@ -518,7 +525,8 @@ a {
     overflow-x: hidden;
     overflow-y: scroll;
     margin: 1%;
-    background: white url('https://static.tumblr.com/kifah6n/axtpzde8u/ruler-post.svg') no-repeat top border-box;
+    background: white url('https://static.tumblr.com/kifah6n/axtpzde8u/ruler-post.svg')
+                no-repeat top border-box;
 }
 
 
@@ -527,6 +535,8 @@ a {
 .post-wrapper::-webkit-scrollbar {
     width: 22px;
     border: 2px solid black;
+    -webkit-box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 1);
+            box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 1);
     background-color: white;
 }
 
@@ -930,6 +940,7 @@ a {
 
 .like-icon a {
     height: 50px;
+    min-width: 27px;
     background: url('https://static.tumblr.com/kifah6n/l83pzdyum/like-icon.svg') no-repeat center top;
     background-size: 35px;
 }
@@ -948,6 +959,7 @@ a {
 
 .twitter-icon a {
     height: 55px;
+    width: 40px;
     background: url('https://static.tumblr.com/kifah6n/wXCpze0wk/twitter-icon.svg') no-repeat center top;
     background-size: 40px;
 }
@@ -960,14 +972,16 @@ a {
 
 .reddit-icon a {
     height: 55px;
+    width: 40px;
     background: url('https://static.tumblr.com/kifah6n/48Tpze0yv/reddit-icon.svg') no-repeat center top;
     background-size: 40px;
 }
 
 .email-icon a {
     height: 55px;
+    width: 41px;
     background: url('https://static.tumblr.com/kifah6n/V6cpze14g/email-icon.svg') no-repeat center top;
-    background-size: 40px;
+    background-size: 41px;
 }
 
 

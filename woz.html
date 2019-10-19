@@ -24,17 +24,11 @@
     {block:Hidden}
         <meta name="if:Infinite Scroll" content="1" />
         <meta name="if:Show Page Menu" content="1" />
-        <meta name="if:Home Icon Label Breakword" content="1" />
         <meta name="if:Show About Icon" content="1" />
-        <meta name="if:About Icon Label Breakword" content="1" />
-        <meta name="if:Ask Icon Label Breakword" content="1" />
         <meta name="if:Show Subscribe Icon" content="1" />
-        <meta name="if:Subscribe Icon Label Breakword" content="1" />
         <meta name="if:Show Contact Icon" content="1" />
-        <meta name="if:Contact Icon Label Breakword" content="1" />
         <meta name="text:Contact Icon E-mail" content="youremail@woz.com"/>
         <meta name="if:Show Archive Icon" content="1" />
-        <meta name="if:Archive Icon Label Breakword" content="1" />
         <meta name="text:Top Navigation Label" content="pages" />
         <meta name="text:Mobile Navigation Label" content="menu" />
         <meta name="text:About Icon Label" content="about" />
@@ -52,7 +46,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://static.tumblr.com/xeccbfq/9Qenv9yn8/normalize.min.css" />
     <link rel="stylesheet" href="https://static.tumblr.com/kifah6n/5YOpz8bz6/styles.min.css" />
-    <link rel="stylesheet" href="https://static.tumblr.com/kifah6n/HUWpzljia/woz.min.css" /> 
+    <link rel="stylesheet" href="https://static.tumblr.com/kifah6n/0u8pzlnin/woz.min.css" /> 
     
     <style type="text/css">
         .posts-wrapper {
@@ -145,48 +139,6 @@
             {block:PermalinkPage}
                 justify-content: space-around;
             {/block:PermalinkPage}
-        }
-        .homepage-icon span {
-            width: min-content;
-            {block:IfHomeIconLabelBreakword}
-                width: unset;
-                word-break: break-word;
-            {/block:IfHomeIconLabelBreakword}
-        }
-        .aboutpage-icon span {
-            width: min-content;
-            {block:IfAboutIconLabelBreakword}
-                width: unset;
-                word-break: break-word;
-            {/block:IfAboutIconLabelBreakword}
-        }
-        .askpage-icon span {
-            width: min-content;
-            {block:IfAskIconLabelBreakword}
-                width: unset;
-                word-break: break-word;
-            {/block:IfAskIconLabelBreakword}
-        }
-        .subscriberss-icon span {
-            width: min-content;
-            {block:IfSubscribeIconLabelBreakword}
-                width: unset;
-                word-break: break-word;
-            {/block:IfSubscribeIconLabelBreakword}
-        }
-        .contact-icon span {
-            width: min-content;
-            {block:IfContactIconLabelBreakword}
-                width: unset;
-                word-break: break-word;
-            {/block:IfContactIconLabelBreakword}
-        }
-        .archive-icon span {
-            width: min-content;
-            {block:IfArchiveIconLabelBreakword}
-                width: unset;
-                word-break: break-word;
-            {/block:IfArchiveIconLabelBreakword}
         }
         {CustomCSS}
     </style>

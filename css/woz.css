@@ -477,9 +477,7 @@ a {
 /***** MAIN CONTENT STYLES *****/
 
 .main-posts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -712,7 +710,12 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 1%;
+    width: 50%;
 }
 
 .post-windows {
@@ -797,10 +800,15 @@ a {
 }
 
 #spiral-img {
-    height: 9px;
+    height: 12px;
+    max-height: 25px;
     width: 100%;
-    background: url('https://static.tumblr.com/kifah6n/MMPpzde98/spiral-notepad.svg') no-repeat center;
-    background-size: 100%;
+    background: url('https://static.tumblr.com/kifah6n/MMPpzde98/spiral-notepad.svg');
+    background-size: cover;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+    margin-bottom: -7px;
+    z-index: 1;
 }
 
 .info-content-wrapper {
@@ -822,7 +830,7 @@ a {
     position: relative;
     height: 30px;
     padding: 3px 0;
-    margin-left: 38px;
+    margin: 10px 0 0 38px;
     background: url('https://static.tumblr.com/kifah6n/Ehtpzde9f/folder.svg') no-repeat;
 }
 
@@ -833,7 +841,8 @@ a {
 }
 
 .info-content {
-    margin: 0 10px;
+    margin: 10px;
+    white-space: unset;
 }
 
 .info-line1 {
@@ -1231,6 +1240,13 @@ a {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+    }
+    .actions-wrapper {
+        width: unset;
+        -webkit-box-orient: unset;
+        -webkit-box-direction: unset;
+            -ms-flex-direction: unset;
+                flex-direction: unset;
     }
     .info-content {
         white-space: normal;

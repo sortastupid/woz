@@ -177,11 +177,12 @@ a {
             align-items: center;
     width: 100%;
     height: 100%;
-    background-image: url("https://static.tumblr.com/kifah6n/AzFpyraol/pattern-desktop.png");
     overflow: hidden;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    background-image: -o-repeating-linear-gradient( left, #fff, #fff 0.45px, #101094 1px, #101094 2px);
+    background-image: repeating-linear-gradient( 90deg, #fff, #fff 0.45px, #101094 1px, #101094 2px);
 }
 
 .desktop-empty {
@@ -812,7 +813,6 @@ a {
     width: 99%;
     min-height: 8vh;
     line-height: 1.5em;
-    letter-spacing: -.2em;
     background: white;
     border: 2px solid black;
 }
@@ -833,7 +833,6 @@ a {
 
 .info-content {
     margin: 0 10px;
-    white-space: nowrap;
 }
 
 .info-line1 {

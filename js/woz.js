@@ -77,6 +77,9 @@ window.addEventListener("resize", () => {
     });
     const dsktp_w = document.querySelectorAll('.desktop-content')[0].offsetWidth;
     const dsktp_h = document.querySelectorAll('.desktop-content')[0].offsetHeight;
-    document.querySelectorAll('.maximize-window')[0].style.width = (dsktp_w - 4) + "px";
-    document.querySelectorAll('.maximize-window')[0].style.height = (dsktp_h - 4) + "px";
+    const mx_window = document.querySelectorAll('.maximize-window')[0];
+    if(mx_window) {
+        mx_window.style.width = (dsktp_w - 4) + "px";
+        mx_window.style.height = (dsktp_h - 4) + "px";
+    }
 });

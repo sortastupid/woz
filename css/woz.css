@@ -318,27 +318,31 @@ a {
             box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 1);
 }
 
-.posts-wrapper::-webkit-scrollbar-button:single-button {
-    position: relative;
-    overflow: hidden;
+.posts-wrapper::-webkit-scrollbar-button:vertical:start:decrement {
     width: 24px;
     height: 24px;
     border: 2px solid black;
-}
-
-.posts-wrapper::-webkit-scrollbar-button:single-button:vertical:decrement {
     background: url('https://static.tumblr.com/kifah6n/9QApzdyb5/arrow-up.svg') no-repeat center;
 }
 
-.posts-wrapper::-webkit-scrollbar-button:single-button:vertical:increment {
+.posts-wrapper::-webkit-scrollbar-button:vertical:end:increment {
+    width: 24px;
+    height: 24px;
+    border: 2px solid black;
     background: url('https://static.tumblr.com/kifah6n/26tpzdybc/arrow-down.svg') no-repeat center;
 }
 
-.posts-wrapper::-webkit-scrollbar-button:single-button:horizontal:decrement {
+.posts-wrapper::-webkit-scrollbar-button:horizontal:start:decrement {
+    width: 24px;
+    height: 24px;
+    border: 2px solid black;
     background: url('https://static.tumblr.com/kifah6n/gCjpzdybi/arrow-left.svg') no-repeat center;
 }
 
-.posts-wrapper::-webkit-scrollbar-button:single-button:horizontal:increment {
+.posts-wrapper::-webkit-scrollbar-button:horizontal:end:increment {
+    width: 24px;
+    height: 24px;
+    border: 2px solid black;
     background: url('https://static.tumblr.com/kifah6n/Barpzdybq/arrow-right.svg') no-repeat center;
 }
 
@@ -529,7 +533,6 @@ a {
                 no-repeat top border-box;
 }
 
-
 /***** POST INACTIVE SCROLLBARS *****/
 
 .post-wrapper::-webkit-scrollbar {
@@ -540,16 +543,15 @@ a {
     background-color: white;
 }
 
-.post-wrapper::-webkit-scrollbar-button:single-button {
+.post-wrapper::-webkit-scrollbar-button:vertical:start:decrement {
     height: 20px;
     border: 2px solid black;
-}
-
-.post-wrapper::-webkit-scrollbar-button:single-button:vertical:decrement {
     background: url('https://static.tumblr.com/kifah6n/FFGpzdy8c/arrow-black-up.svg') no-repeat center;
 }
 
-.post-wrapper::-webkit-scrollbar-button:single-button:vertical:increment {
+.post-wrapper::-webkit-scrollbar-button:vertical:end:increment {
+    height: 20px;
+    border: 2px solid black;
     background: url('https://static.tumblr.com/kifah6n/Yhzpzdyak/arrow-black-down.svg') no-repeat center;
 }
 
@@ -1086,9 +1088,33 @@ a {
 
 /****************************************/
 
+.like-b {
+    /* Our Text Like Button */
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+}
+
 .like-b .like_button iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    opacity: .000001;
     height: 100%;
     width: 100%;
+}
+
+.like-b .liked+.b {
+    color: inherit;
+}
+
+.like-b .liked+.b:after {
+    content: 'd';
 }
 
 .maximize-window {
@@ -1096,7 +1122,7 @@ a {
     top: unset !important;
     left: unset !important;
     max-width: unset;
-    max-height: unset
+    max-height: unset;
 }
 
 .show-cross {

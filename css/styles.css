@@ -63,10 +63,7 @@ header {
 
 /***** POST TYPES *****/
 .photoset {
-    margin: 0 auto;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    margin-bottom: 10px;
 }
 .chat-lines {
     list-style: none;
@@ -85,6 +82,36 @@ header {
     height: 100%;
     left: 0;
     top: 0;
+}
+
+/***** CUSTOM TEXT LIKE BUTTON *****/
+.like-b {
+    /* Our Text Like Button */
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+}
+
+.like-b .like_button iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    opacity: .000001;
+    height: 100%;
+    width: 100%;
+}
+
+.like-b .liked+.b {
+    color: inherit;
+}
+
+.like-b .liked+.b:after {
+    content: 'd';
 }
 
 /***** ANIMATIONS *****/

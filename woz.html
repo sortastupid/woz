@@ -43,8 +43,9 @@
 
     <!-- Theme Styles -->
     <link rel="stylesheet" href="https://static.tumblr.com/xeccbfq/9Qenv9yn8/normalize.min.css" />
-    <link rel="stylesheet" href="https://static.tumblr.com/kifah6n/5YOpz8bz6/styles.min.css" />
-    <link rel="stylesheet" href="https://static.tumblr.com/kifah6n/7umpzsxjy/woz.min.css" />
+    <link rel="stylesheet" href="https://static.tumblr.com/kifah6n/UoBpzybql/styles.min.css" />
+    <link rel="stylesheet" href="https://static.tumblr.com/kifah6n/d6wpzyd71/woz.min.css" />
+    <link rel="stylesheet" href="https://static.tumblr.com/kifah6n/z60pzydpr/pxu-photoset.min.css" />
 
     <style type="text/css">
         .posts-wrapper {
@@ -144,6 +145,33 @@
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://static.tumblr.com/kifah6n/yYqpybi3h/scripts.min.js"></script>
     <script type="text/javascript" src="https://static.tumblr.com/kifah6n/fK1pzqzpb/woz.min.js"></script>
+    <script type="text/javascript" src="https://static.tumblr.com/kifah6n/ZgXpzwt9r/pxuphotoset.min.js"></script>
+    <script>
+        window.addEventListener("load", () => {
+           const setPhotosets = () => {
+               $('.photo-slideshow').pxuPhotoset({
+                   lightbox: true,
+                   rounded: false,
+                   gutter: '7px',
+                   borderRadius: '0px',
+                   photoset: '.photo-slideshow',
+                   photoWrap: '.photo-data',
+                   photo: '.pxu-photo'
+               });
+           }
+           setPhotosets();
+           {block:IfInfiniteScroll}
+               const scrll_c = document.querySelectorAll(".posts-wrapper")[0];
+               scrll_c.addEventListener("scroll", () => {
+                    const h = scrll_c.scrollTop + scrll_c.clientHeight;
+                    const end = h - scrll_c.scrollHeight === 0;
+                    if (end) {
+                        setTimeout(() => setPhotosets(), 500);
+                    }
+                });
+           {/block:IfInfiniteScroll}
+        });
+    </script>
     {block:IfInfiniteScroll}
         <script type="text/javascript" src="https://static.tumblr.com/kifah6n/WHXpzduqt/infinite-scroll.min.js"
             scrll_c=".posts-wrapper" posts_c=".posts" btn_c="" btn_tgl=""
@@ -312,11 +340,22 @@
                                             {/block:Panorama}
                                             {block:Photoset}
                                                 <div class="photoset">
-                                                    {Photoset}
-                                                    {block:Caption}
-                                                        {Caption}
-                                                    {/block:Caption}
+                                                    <div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">
+                                                        {block:Photos}
+                                                            <div class="photo-data">
+                                                                <div class="pxu-photo">
+                                                                    <img src="{PhotoURL-500}" width="{PhotoWidth-500}"
+                                                                        height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}"
+                                                                        data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}">
+                                                                </div>
+                                                                <a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a>
+                                                            </div>
+                                                        {/block:Photos}
+                                                    </div>
                                                 </div>
+                                                {block:Caption}
+                                                    {Caption}
+                                                {/block:Caption}
                                             {/block:Photoset}
                                             {block:Quote}
                                                 <div class="quote">
@@ -503,8 +542,10 @@
                                                     <div class="clipboard-wrapper">
                                                         <div class="clipboard-icons1">
                                                             <div class="like-icon">
-                                                                <a class="like-b" href="#">{LikeButton}<span class="b">
-                                                                <span class="clip1-span">Like</span></span></a>
+                                                                <div class="like-b">
+                                                                    {LikeButton}
+                                                                    <span class="b clip1-span">Like</span>
+                                                                </div>
                                                             </div>
                                                             <div class="reblog-icon">
                                                                 <a href="{ReblogURL}">

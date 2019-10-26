@@ -147,18 +147,18 @@
     <script type="text/javascript" src="https://static.tumblr.com/kifah6n/fK1pzqzpb/woz.min.js"></script>
     <script type="text/javascript" src="https://static.tumblr.com/kifah6n/ZgXpzwt9r/pxuphotoset.min.js"></script>
     <script>
+        const setPhotosets = () => {
+            $('.photo-slideshow').pxuPhotoset({
+                lightbox: true,
+                rounded: false,
+                gutter: '7px',
+                borderRadius: '0px',
+                photoset: '.photo-slideshow',
+                photoWrap: '.photo-data',
+                photo: '.pxu-photo'
+            });
+        }
         window.addEventListener("load", () => {
-           const setPhotosets = () => {
-               $('.photo-slideshow').pxuPhotoset({
-                   lightbox: true,
-                   rounded: false,
-                   gutter: '7px',
-                   borderRadius: '0px',
-                   photoset: '.photo-slideshow',
-                   photoWrap: '.photo-data',
-                   photo: '.pxu-photo'
-               });
-           }
            setPhotosets();
            {block:IfInfiniteScroll}
                const scrll_c = document.querySelectorAll(".posts-wrapper")[0];
@@ -292,7 +292,7 @@
                                 <div class="big-lines"></div>
                                 <div class="big-lines"></div>
                             </div>
-                            <div class="square-wrapper" onclick="toggleWindow()">
+                            <div class="square-wrapper" onclick="toggleWindow(); setPhotosets();">
                                 <div class="square-icon"></div>
                                 <div class="square-icon2"></div>
                             </div>

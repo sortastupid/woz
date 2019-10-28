@@ -589,15 +589,26 @@ a {
     text-decoration: underline;
 }
 
-
 /***** POST TYPES *****/
+
+.post img {
+    max-width: 100%;
+}
+
+figure img {
+    height: 100%;
+}
 
 .text {
     text-indent: 40px;
 }
 
-.photo,
-.quote,
+.photo {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+
 .link {
     text-align: center;
 }
@@ -612,6 +623,7 @@ a {
 .title-excerpt {
     /* Link Posts */
     font-weight: 600;
+    text-align: center;
     background: white;
 }
 
